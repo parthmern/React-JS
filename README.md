@@ -1,14 +1,14 @@
 # React-JS
 
-### ❤️ What is React ?
+## ❤️ What is React ?
 ➔ Js library used to create UI <br/>
 ➔ library = A programming library is a collection of prewritten code that programmers can use to optimize tasks ( in C lang we use the pow(a,b) pre-defined function with using stdlib.h library  <br/>
 <br/>
 ➔ React is all about components so it is component based architecture <br/>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 
-### 💙 Why we need React ?
+## 💙 Why we need React ?
 ➔ JS is based on imparative approach <br/> 
 ➔ React is based on declarative approach <br/>
 <br/>
@@ -26,25 +26,25 @@
 4) SOC(seperation of concern)
 5) maintainability
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
  
-### 💜 Comopnent
+## 💜 Comopnent
 ➔ a piece of code that used multiple times - reusable piece of code <br/>
 ➔ ( like custom html element that we can use multiple times ) <br/>
 ➔ same work as Function ( create js file and write function )
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 
-### 💛 Installation 
+## 💛 Installation 
 ➔ Install node js ( [link](https://youtu.be/mIW_8dMQaUk) and check `node -v` and `npm -v` ) <br/>
 ➔ Vs code <br/>
 <br/>
 ➔ React installation ( [vidLink]( ) )<br/>
 ➔ if above is not working then [try this](https://youtu.be/tg73NsiQOUE) <br/>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 
-### 💙 Direct starter pack
+## 💙 Direct starter pack
 
 [startert pack](https://github.com/thepranaygupta/react-tailwind-css-starter-pack)  <br/>
 
@@ -59,10 +59,10 @@ public > index.html = contains 'root'   <br/>
 
 ⚠️ firstly excecutes `index.js` file then it goes to `index.html` file to get the `<root>` div and it converts rootDiv to react-root and then it render `<App>` from `App.js` or `App.jsx` and here `App.js` contains html code <br/>
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 
-### 💚 Create Component
+## 💚 Create Component
 
 ✔️ ➔ first create `components` folder in src  <br/>
 ✔️ ➔ then src > components then create `Item.js` and `Item.css` <br/>
@@ -125,7 +125,7 @@ export default App;                           // exporting `App.js` because we h
 ━━━━━━━━━━<br/>
 <br/>
 
-✔️ ➔ EXTRA `index.js` looks like this
+✔️ ➔ **EXTRA** `index.js` looks like this
 
 ```
 import React from "react";
@@ -136,3 +136,25 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render( <App /> );
 ```
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+💤 In JSX how to use varibales value
+```
+function any()
+{
+    const var = 5 ;
+
+    return (
+    <p> {var} </p>
+    );
+
+}
+```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+
+
+## 💙 PROPS - properties
+
+
+
