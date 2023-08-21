@@ -138,7 +138,10 @@ root.render( <App /> );
 ```
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
-💤 In JSX how to use varibales value
+
+## 💙 PROPS - properties
+
+💤 **Extra -** In JSX how to use varibales value
 ```
 function any()
 {
@@ -150,11 +153,45 @@ function any()
 
 }
 ```
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+<br/>
+✔️ ➔ here we have to send properties from `App.js` file like this
+```
+function App()
+{
+  const itemTwoName = "patel" ;
 
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+  return (
+    <div>
+         //one way
+         <item name = "parhu" > </item>
 
+         //second way
+         <item name ="{ itemTwoName } " > </item>
 
-## 💙 PROPS - properties
+         //children of prop
+         <item> i am children which is between and inside the component </item>
+    </div>
+ );
+}
+```
 
+✔️ ➔ in `Item.js` we have to change things like
 
+```
+function Item(props)
+{
 
+ const pname = props.name ;
+
+  return(
+         <div>                                    // IMP = if there are more than one html line then put them into <div> TAG
+
+             <p> {pname} </p>                          
+             { props.children }                   // here we can acces " i am children..."
+
+          </div>
+  );
+}
+```
