@@ -160,7 +160,7 @@ function any()
 ```
 function App()
 {
-  const itemTwoName = "patel" ;
+  const itemTwoName = "patel" ;                                       //⚠️ here we are doing PARENT to CHILD communcation using props matlab parent kuch value send kar rha hai child ko
 
   return (
     <div>
@@ -199,7 +199,7 @@ function Item(props)
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
-## 💛 PROPS as Evnet handling
+## 💛 PROPS as Event handling
 
 ```
 function clickHandlerFunction()
@@ -250,7 +250,7 @@ function clickedBtn()
 ➔ ✔️ After state
 
 ```
-import React, {useState} from 'react';               // first import {useState} which is react-Hook
+import React, {useState} from 'react';               // first import {useState} which is react-Hook(utility function)
 
 function clickedBtn()
 {
@@ -275,11 +275,65 @@ function clickedBtn()
 // 📝 after clicked on <button> there is also re-Redering and the value of <h2> updated to new value on UI
 ```
 
+<br/>
+
 📑 HomeWork = <br/>
+
 1 = [Why React Hook useState uses const and not let](https://stackoverflow.com/questions/58860021/why-react-hook-usestate-uses-const-and-not-let#:~:text=useState%20is%20simply%20a%20state,for%20you%20by%20calling%20useState.&text=After%20calling%20setCount%20the%20component,useState%20returns%20the%20new%20value.)  <br/>
+
 2 = [what is immutable react js - combined with useState que ]()  <br/>
+
 3 = [React setState/useState happens instantly or takes time](https://linguinecode.com/post/why-react-setstate-usestate-does-not-update-immediately)<br/>
 
+<br/>
+<br/>
+📑 Extra for FORM = <br/>
+➔ *get the value of input field that inserted by user using (event) and `event.target.value` word* <br/>
+➔ *how to set value of any text field `value = { xyz }` it can set value as "xyz" in inputfield* <br/>
+<br/>
+<br/>
+⚠️ Communicate from CHILD to PARENT ( matlab child value send krega parent ko ) <br/>
+
+➔ `app.js` means PARENT looks like this <br/>
+
+<br/>
+
+```
+function App() {
+
+  function ParentValue(data)
+  {
+     console.log(data);
+  }
+
+  return (
+
+    <div>
+      <Child ParentValueFunc={ParentValue}></Child>          //here using props we are sending function to the Child
+    </div>
+    
+  );
+}
+```
+
+<br/>
+
+➔ `Child.js` means CHILD looks like
+
+```
+
+function Child(props){
+
+    props.ParentValueFunc("dataaa Inside secreate");             //here ParentValueFunc get the parameter as data = "dataaa Inside secreate" 
+    
+    return(<p>hell insider here</p>);
+}
+```
+
+*so we can send the value from CHILD to PARENT using function with parameter like above*
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
 
 
