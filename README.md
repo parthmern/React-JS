@@ -195,3 +195,92 @@ function Item(props)
   );
 }
 ```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## 💛 PROPS as Evnet handling
+
+```
+function clickHandlerFunction()
+{
+  //anything that you want to perform
+}
+
+// Event Handling
+<button onClick={clickHandlerFunction} > xxxx </button>
+```
+
+⚠️ *always remeber that while using `callbackFuntion` avoid to write this `callbackFuntion()` beacuse `()` means that automatically calls the function without any Event done*
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## ❤️ State
+➔ for Re-Rendering purpose <br/>
+➔ like i want to change innerText / value updation of any element when i click on the button but to do this i have to do Re-Rendering <br/>
+<br/>
+➔ Before state
+```
+function clickedBtn()
+{
+  const title = "oldValue" ;
+
+  function cbFunc()
+  {
+    title = "newValue" ;
+  }
+
+  return(
+
+  <div>
+       <h2> {title} </h2>
+       <button onClick={cbFunc} > xxxx </button>
+  </div>
+  
+  );
+}
+
+// 📝 here first react render the whole DOM so the value of title = "oldValue" and it print "oldValue" in <h2> tag  but when we clicked on
+// <button> tag that time the value of title = "newValue" changed so that time again Render is not possible and the again print is not possible so NOT any CHANGES in <h2> tag output
+
+```
+<br/>
+<br/>
+➔ ✔️ After state
+
+```
+import React, {useState} from 'react';               // first import {useState} which is react-Hook
+
+function clickedBtn()
+{
+  const [title,valueUpdateFunc] =useState("oldValue");             //useState returns 2 things as array form first is newValue of variable and function for updating value (using destructing js method)
+
+                                                        // syntax = const [variableName , valueUpdateFunc] = useState("oldValue");
+  function cbFunc()
+  {
+    valueUpdateFunc("newValue");
+  }
+
+  return(
+
+  <div>
+       <h2> {title} </h2>
+       <button onClick={cbFunc} > xxxx </button>
+  </div>
+  
+  );
+}
+
+// 📝 after clicked on <button> there is also re-Redering and the value of <h2> updated to new value on UI
+```
+
+📑 HomeWork = <br/>
+1 = [Why React Hook useState uses const and not let](https://stackoverflow.com/questions/58860021/why-react-hook-usestate-uses-const-and-not-let#:~:text=useState%20is%20simply%20a%20state,for%20you%20by%20calling%20useState.&text=After%20calling%20setCount%20the%20component,useState%20returns%20the%20new%20value.)  <br/>
+2 = [what is immutable react js - combined with useState que ]()  <br/>
+3 = [React setState/useState happens instantly or takes time](https://linguinecode.com/post/why-react-setstate-usestate-does-not-update-immediately)<br/>
+
+
+
+
+
