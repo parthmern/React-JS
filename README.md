@@ -287,6 +287,13 @@ function clickedBtn()
 
 <br/>
 <br/>
+
+🚨 EROORS=<br/>
+➔ img is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`. ==> then write `<img />` in just single closing
+
+<br/>
+<br/>
+
 📑 Extra for FORM = <br/>
 ➔ *get the value of input field that inserted by user using (event) and `event.target.value` word* <br/>
 ➔ *how to set value of any text field `value = { xyz }` it can set value as "xyz" in inputfield* <br/>
