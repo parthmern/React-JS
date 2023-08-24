@@ -216,7 +216,7 @@ function clickHandlerFunction()
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
-## ❤️ State
+## ❤️ State (useState Hook
 ➔ for Re-Rendering purpose <br/>
 ➔ like i want to change innerText / value updation of any element when i click on the button but to do this i have to do Re-Rendering <br/>
 <br/>
@@ -339,9 +339,72 @@ function Child(props){
 
 *so we can send the value from CHILD to PARENT using function with parameter like above*
 
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
 
+## 💜  useEffect ( raect hook )
+➔ manage side-effects (if i do any action at one component then there is also some changes on another component - ex.changing doc title, modifying state of parent component,api calls,changes in DOM ) <br/>
+➔ every RENDER of UI useEffect will excecute <br/>
+➔ agar aap kuch kaam karwane chahte ho UI render means UI me changes hone k baad tab aap useEffect use kar sakte ho
+
+```
+import {useEffect, useState} from "react";           // first import
+
+function App()
+{
+
+   const [text,setText] = useState('') ;
+
+//------------------------------------------
+  // VARIATION-1️⃣ (every render)
+
+  useEffect( () => {
+    console.log("UI render Done");} 
+  );
+
+//------------------------------------------
+  // VARIATION-2️⃣  (first render - when app.js fully renderd for first time)
+
+  useEffect( ()=>{
+    console.log("UI rendere done");
+  },[] );
+
+//------------------------------------------
+  //VARIATION-3️⃣ (first render + whenever dependency changes)                  // firts render + whenever variable "text" changes this useEffect runs
+
+  useEffect(()=>{
+    console.log(" text changed observed");
+  } , [text] )
+
+//------------------------------------------
+  //VARIATION-4️⃣ (to handle unmounting of components)
+
+  useEffect(()=>{
+    //add event listener
+    console.log("listener added");
+
+    return ()=>{ console.log("listener removed"); }
+  })                                                                            //IMP= first run "listener removed" then run "listener added"
+
+
+//---------------------------------------------------------------------------------
+
+  function changeHandler(event){
+    setText(event.target.value)
+    console.log(text);
+  }
+
+  return (
+    <div className="App">
+      <input type="text" onChange={changeHandler} />
+    </div>
+  );
+
+}
+
+
+```
 
 
