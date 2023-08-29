@@ -465,5 +465,18 @@ function App()
 
 ➔ JS topic= [referance link of spread operator with object](https://www.javascripttutorial.net/es-next/javascript-object-spread/)
 
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+### 💛 Controlled Components
+➔ maintain state inside component
 
+```
+ <input type="text" placeholder="first name" onChange={changeHandler} name="firstName" value={formData.firstName}></input>
+        
+ <input type="text" placeholder="last name" onChange={changeHandler} name="lastName" value={formData.lastName} ></input>
+
+// here we are also re-rendering values from formData object in the components
+// matalab jab bhi formData ki state change hogi then tab har ek components jisme value={formData.something} dali hui hai uski value b re-render hogi
+// bascially formData me jo bhi value aarhi hai usko hum uske original components me update kar rhe hai
+
+```
 
