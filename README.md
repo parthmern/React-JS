@@ -407,4 +407,63 @@ function App()
 
 ```
 
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+## 💙 Array methods
+➔ using array , if we want to create multiple components at a time then use `array.map( callBackFunc )` <br/>
+➔ if we want to do filter then use `array.filter (callBackFunc)` <br/>
+
+```
+items.map( (item)=> { return (<div>{item}</div>) } );
+```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+## ❤️ React Forms
+➔ form handleing is difficult in js because everytime we have to create different functions to save the value of all fields in form
+
+```
+
+function App() 
+{
+
+  const [formData,setFormData] = useState(
+    {
+      firstName : "" ,
+      lastName : "",
+    }
+  );
+
+  function changeHandler(event){
+    setFormData( (prevFormData)=>{
+      return {
+        ...prevFormData,
+        [event.target.name] : event.target.value 
+      }
+    } )
+  }
+
+  return (
+    <div>
+      <form>
+        
+        <input type="text" placeholder="first name" onChange={changeHandler} name="firstName" ></input>
+        
+        <input type="text" placeholder="last name" onChange={changeHandler} name="lastName"></input>
+        
+      </form>
+    </div>
+  );
+}
+
+
+// here every changes on <input> tag , the changeHandler function will run
+// and in function setFormData will take return the object with value which is already named as `formData`
+// the under process in return => it take previousObject with all changed properties and then access that property using the `name` that given in html element
+// means 1) previous state copy 2) element trigger and value update
+```
+
+➔ JS topic= [referance link of spread operator with object](https://www.javascripttutorial.net/es-next/javascript-object-spread/)
+
+
 
