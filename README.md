@@ -480,3 +480,59 @@ function App()
 
 ```
 
+➔ [some imp of react form handeling with checkBox](https://github.com/parthmern/Web-Development-with-CodeHelp/tree/master/9_React-Intermediate)
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+## 💚 React Router
+➔ SPA - single page application ( only one html file where changes happens dynamically and if you click anywhere no reloading )<br/>
+➔ React Router is a popular library for handling routing in React applications.(route-path)<br/>
+➔ it allows you to create single-page applications with multiple views, each represented by a specific URL. <br/>
+➔ This makes it possible to navigate between different sections(homepage,about,support section) of your application without triggering a full page reload.<br/>
+
+```
+// installation
+
+npm install react-router-dom
+```
+ 
+➔ then `index.js` page
+```
+import { BrowserRouter } from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+);
+```
+➔ then creates different Components like Home,Support,NotFound <br/>
+➔ then in `app.js` 
+
+```
+import { Routes, Route, Link, NavLink} from "react-router-dom";
+
+// and import all pages(components) here
+
+function App(){
+
+return (
+<div>
+
+     <div>
+          <Link to="/">Home</Link>                              //here "Link" works like <a> tag and "to" works like href="/" attribute
+          <NavLink to="/support">support</NavLink>              //here "NavLink" is same as "Link" but it adds .active class in active component so easy to identify active
+     </div>
+
+     <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/support" element={<Support/>}></Route>
+        <Route path="*" element={<NotFound/>}></Route>          // * means universal excluding mentioned paths
+      </Routes>
+
+</div>
+)
+}
+
+```
