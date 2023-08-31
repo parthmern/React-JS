@@ -535,4 +535,95 @@ return (
 )
 }
 
+
 ```
+
+➔ *here "/" is home and "/support" is the child of / (home) > /support --- and because of this we can do NESTED ROUTING* <br/>
+<br/>
+➔ */*     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        ---> parent  <br/>
+➔ */support* &nbsp; &nbsp; &nbsp;        ---> in / there is support --- child <br/>
+➔ */about* &nbsp; &nbsp; &nbsp;         ---> in / there is about --- child <br/>
+
+```
+// nested-routing
+
+<Routes>
+
+         <Route path="/" element={<Home/>}>
+         <Route path="/support" element={<Support/>}></Route>
+         <Route path="*" element={<NotFound/>}></Route>
+         </Route>
+
+</Routes>
+
+```
+
+➔ *but here parent element wo child route element ko render nhi hone de raha matalab sab urls par sirf homePage he open ho raha hai* <br/>
+ <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+ <br/>
+➔ `<Outlet>` parent route element ke andar child route elemnt ko render karne ki permission deta hai <br/>
+
+```
+<Routes>
+        <Route path="/" element={<Mainheader/>}>
+           <Route index element={<Home/>}></Route>                             // index means default route
+           <Route path="/support" element={<Support/>}></Route>
+           <Route path="/about" element={<About/>}></Route>
+           <Route path="*" element={<NotFound/>}></Route>
+        </Route>
+      </Routes>
+```
+
+➔ in `Mainheader` component
+```
+import { Outlet } from "react-router-dom" ;
+
+function Mainheader ()
+{
+   return ( <Outlet></Outlet> ) 
+}
+
+```
+
+
+➔ `<Route index>` matches only when the URL path exactly matches the parent route's path and is typically used for rendering default content within a section of your app.<br/>
+➔ `<Route path="*">` acts as a catch-all route, rendering its component when no other route has matched the URL path. It's often used to handle undefined routes or show error pages.
+
+ <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+ <br/>
+
+### ✔️ useNavigate()  
+➔ navigation through anywhere  <br/>
+➔ here in `Labs` page component <br/>
+
+```
+import { useNavigate } from "react-router-dom" ;
+
+const Labs =()=>{
+
+    const navigate = useNavigate();
+
+    function clickHandler(){
+        navigate("/about");                     // here ("url") means navigate to "url"
+    }
+
+   function backHandler(){
+        navigate(-1);                           // here (-1) means it navigate to the BACK (PREVIOUS) opened page
+    }
+
+    return(
+        <div>
+            <div>
+                this is labs page
+            </div>
+            <button onClick={clickHandler}>move to about page</button>
+            <button onClick={backHandler}>Go Back </button>
+        </div>
+    )
+
+}
+```
+ 
