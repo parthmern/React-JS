@@ -626,4 +626,10 @@ const Labs =()=>{
 
 }
 ```
+ <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+ <br/>
  
+## 💙 Conditional Operators
+✔️ [**REACT conditional Operators**](https://chat.openai.com/share/0421b886-f0bb-4362-a912-7f89dd22716d)
