@@ -633,3 +633,37 @@ const Labs =()=>{
  
 ## 💙 Conditional Operators
 ✔️ [**REACT conditional Operators**](https://chat.openai.com/share/0421b886-f0bb-4362-a912-7f89dd22716d)
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## 💛 api fetching axios method
+➔ installing
+```
+npm install axios
+```
+➔ using
+```
+import axios from "axios";
+
+async function fetchData(){
+
+        const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
+
+        const output = await axios.get(url);
+
+        console.log(output);
+
+    }
+    
+useEffect(()=>{fetchData()} , [])
+
+```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## ❤️ Custom HOOK
+➔ avoid code duplication <br/>
+➔ [custom hooks explained](https://chat.openai.com/share/6702aa24-ade0-4cbe-bc4d-f7c032cea12c) <br/> 
+➔ [thapa technical yt](https://youtu.be/ZyNWBiay5S4?si=VZByBKJMVWqbDDiw) <br/>
