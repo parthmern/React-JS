@@ -665,5 +665,6 @@ useEffect(()=>{fetchData()} , [])
 
 ## ❤️ Custom HOOK
 ➔ avoid code duplication <br/>
+➔ [DRY coding + yt explained shortest](https://youtu.be/TM6G_23tNVw?si=euj2lzyMzflqBH0A)  <br/> 
 ➔ [custom hooks explained](https://chat.openai.com/share/6702aa24-ade0-4cbe-bc4d-f7c032cea12c) <br/> 
 ➔ [thapa technical yt](https://youtu.be/ZyNWBiay5S4?si=VZByBKJMVWqbDDiw) <br/>
