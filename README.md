@@ -702,4 +702,63 @@ useEffect(()=>{fetchData()} , [])
 
 <img src="https://www.carlrippon.com/static/0d1f722d0fe4c2bc4c3d71595dbe67dd/ca682/prop-drilling-v-context.png" width="700px" height="400px" />
 
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➔ firstly created a folder named "context" and then created a file named "AppContext.js" in that
 
+```
+export const AppContext = createContext();
+
+function AppContextProvider( {children} )                            //🌐 children means `<App />`
+{
+   const [loading,setLoading] = useState(false);
+   const [page,setPage] = useState(1);
+
+   // data filling
+   if(page==1){
+   setPage(page+1);
+   }
+
+   function handlePageChange(page){
+        setPage(page);
+    }
+
+   const value = {           //✔️ value is Object
+   loading,
+   setLoading,
+   page,
+   setPage,
+   handlePageChange
+   }
+
+   // 💯 AppContext.Provider because we have created AppContext as createContext
+
+   return <AppContext.Provider value={value}>     //✔️ we are using above value obj
+        {children}                                //🌐 children means `<App />`
+    </AppContext.Provider>;
+
+}
+```
+
+➔ we want to use AppContextProvider() on `App.js` and their children 
+➔ so in `index.js` file we are doing this and here we are sending `<App/>` component as {children} in the "AppContext.js"
+
+```
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <AppContextProvider>
+    <App />
+  </AppContextProvider>
+);
+```
+
+### ➔ useContext Hook -- consuming data 
+
+```
+import { AppContext } from "../context/AppContext";
+
+
+const value = useContext(AppContext);
+// or
+const { loading } = useContext(AppContext);
+
+```
