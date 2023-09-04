@@ -299,7 +299,7 @@ function clickedBtn()
 ➔ *how to set value of any text field `value = { xyz }` it can set value as "xyz" in inputfield* <br/>
 <br/>
 <br/>
-⚠️ Communicate from CHILD to PARENT ( matlab child value send krega parent ko ) <br/>
+⚠️ **State Lifting UP=** Communicate from CHILD to PARENT ( matlab child value send krega parent ko ) <br/>
 
 ➔ `app.js` means PARENT looks like this <br/>
 
@@ -668,3 +668,38 @@ useEffect(()=>{fetchData()} , [])
 ➔ [DRY coding + yt explained shortest](https://youtu.be/TM6G_23tNVw?si=euj2lzyMzflqBH0A)  <br/> 
 ➔ [custom hooks explained](https://chat.openai.com/share/6702aa24-ade0-4cbe-bc4d-f7c032cea12c) <br/> 
 ➔ [thapa technical yt](https://youtu.be/ZyNWBiay5S4?si=VZByBKJMVWqbDDiw) <br/>
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## 💙 Context API
+
+➔ **Prop Drilling** <br/>
+➔ [what is Prop Drilling ? and disadvantages](https://chat.openai.com/share/fe576ecd-5cf9-4f8f-8976-c813f043a414) <br/>
+➔ [what is Prop Drilling ?](https://chat.openai.com/share/fe576ecd-5cf9-4f8f-8976-c813f043a414) <br/>
+
+<br/>
+
+➔ **State Lifting UP** <br/>
+➔ [what is ? - send data from child to parents using propFunction](https://chat.openai.com/share/7f01b44a-7a12-46f5-8ad0-37af826e4c90)  <br/>
+
+<br/>
+
+➔ we are sending props from one parent to the child1 then child2 then child3 then child4 - and here the child1, child2, child3 do not need the data but if we want to pass the data from parent to the child4 then we have to do it  <br/>
+➔ it reduce redundancy and performance <br/>
+➔ so the solution to send data from parent to child4 without including the child1,2,3 -- is context api
+
+<img src="https://camo.githubusercontent.com/a7f3db9e96268a208a485a976a27aa54ea54badf8d9ba960ce50ef1bb908eb73/68747470733a2f2f6765656b6561736b626c6f67706963732e73332d61702d736f757468656173742d322e616d617a6f6e6177732e636f6d2f706f7374732f575832303139303733302d31333533353425343032782e706e67" width="600px" height="300px" />
+
+ <br/>
+
+➔ Rules:  <br/>
+➔ createContext() = creation of context <br/>
+➔ provider = context provide <br/>
+➔ consume <br/>
+
+✔️ *jis component me context provide kar rhe hai wo component and us component ke sabhi childrens uus value ko use kar sakte hai --means decenteralized value create kar rhe hai* <br/>
+
+<img src="https://www.carlrippon.com/static/0d1f722d0fe4c2bc4c3d71595dbe67dd/ca682/prop-drilling-v-context.png" width="700px" height="400px" />
+
+
