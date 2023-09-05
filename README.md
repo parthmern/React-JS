@@ -762,3 +762,12 @@ const value = useContext(AppContext);
 const { loading } = useContext(AppContext);
 
 ```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## 🤍 useSearchParams() and useLocation() in react-route
+ 
+➔ [useSearchParams()](https://chat.openai.com/share/fc36c106-c78f-4635-8d25-4822a01d17f5) <br/>
+➔ [useLocation()](https://chat.openai.com/share/1a6c673f-89f5-45c0-adcc-0887827ab847)  <br/>
+➔ [LoveBabbar-guide](https://drive.google.com/file/d/1MgZvDD_weKooCxKD-HZI88xoxnejqENH/view?usp=sharing) <br/>
