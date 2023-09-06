@@ -829,7 +829,7 @@ import CounterSlice from './slices/CounterSlice';
 const store = configureStore({
 
   reducer : {
-        counter : CounterSlice
+        counter : CounterSlice ,                         // idhar "reducer" obj k andar sabhi slides ayegi ==> name : sliceName
     },
 
 })
