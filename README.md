@@ -771,3 +771,125 @@ const { loading } = useContext(AppContext);
 ➔ [useSearchParams()](https://chat.openai.com/share/fc36c106-c78f-4635-8d25-4822a01d17f5) <br/>
 ➔ [useLocation()](https://chat.openai.com/share/1a6c673f-89f5-45c0-adcc-0887827ab847)  <br/>
 ➔ [LoveBabbar-guide](https://drive.google.com/file/d/1MgZvDD_weKooCxKD-HZI88xoxnejqENH/view?usp=sharing) <br/>
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+
+## 💚 Redux ToolKit
+
+➔ what is and why ?
+
+✔️ Installation
+```
+npm install @reduxjs/toolkit react-redux
+```
+
+✔️ create Slice = slices canbe single or multiples ( like SLICEs of one pizza and they create a whole pizza that is STORE )
+```
+//📂 src > redux folder > slices folder > CounterSlice.js
+
+import { createSlice } from "@reduxjs/toolkit";
+
+
+//🏳️‍🌈 createSlice mei 3 things ayegi 1)name 2)initialState 3)reducers means obj jis k andar sab functions honge
+
+const initialState={
+    value : 0,
+}
+
+export const CounterSlice = createSlice({
+    name: 'counter',
+    initialState,
+    reducers : {
+        increment : (state) => {
+            state.value += 1;
+        },
+
+        decrement : (state) =>{
+            state.value -= 1;
+        }
+    }
+})
+
+// 🌐 in every slice 
+export const { increment, decrement } = CounterSlice.actions;   //exporting functions from actions
+export default CounterSlice.reducer;                            //exporting reducer
+
+```
+
+✔️ create Store = store k andar sab slices ayegi ( store global state/centeralized state hogi jiske andar sab states store hogi in form of slices )
+
+```
+//📂 src > redux folder > store.js
+
+import { configureStore } from '@reduxjs/toolkit';
+
+import CounterSlice from './slices/CounterSlice';
+
+const store = configureStore({
+
+  reducer : {
+        counter : CounterSlice
+    },
+
+})
+
+export default store;
+```
+
+✔️ Connect reduxToolkit with reactJs using `<Provider>` 
+
+```
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <Provider store={store} >
+    <App />
+  </Provider>
+);
+
+// aab <App/> k andar k sare components use kar payenge redux States ko
+```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ <br/>
+### useSelector() ✔️ Access state/ value from Slice
+
+```
+import { useSelector } from "react-redux";
+
+const value = useSelector( (state)=> state.counter.value )
+
+//📝EXPLAINED----------------------------------------------------------------
+// here useSelector( callBack function that returns the value )
+// sabse pehele call store me jati hai then wo slice me jati hai
+
+// state => { counter: {value: 0} }
+// state.counter => {value: 0}
+// state.counter.value => 0
+
+// matlab "state" k andar sabhi slices hongi and us slices k andar unki value hongi
+// idhar sirf ek slice hai jiska name "counter" diya tha and uski initialState(initialValue) = 0 define ki thi
+```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ <br/>
+### useDispatch() ✔️ Access functions(reducers)
+
+```
+import { useDispatch} from "react-redux";
+import { decrement, increment } from "../redux/slices/CounterSlice";
+
+function CounterComponent()
+{
+   const dispatch = useDispatch();
+
+   return(
+   <div>
+      <button onClick = { ()=>dispatch( increment() ) } > Increment </button>
+      <button onClick = { ()=>dispatch( decrement() ) } > Decrement </button>
+    </div>)
+
+}
+
+```
