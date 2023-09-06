@@ -168,7 +168,7 @@ function App()
          <item name = "parhu" > </item>
 
          //second way
-         <item name ="{ itemTwoName } " > </item>
+         <item name ={ itemTwoName } > </item>
 
          //children of prop
          <item> i am children which is between and inside the component </item>
@@ -180,7 +180,7 @@ function App()
 ✔️ ➔ in `Item.js` we have to change things like
 
 ```
-function Item(props)
+function Item(props)                              
 {
 
  const pname = props.name ;
@@ -190,6 +190,22 @@ function Item(props)
 
              <p> {pname} </p>                          
              { props.children }                   // here we can acces " i am children..."
+
+          </div>
+  );
+}
+
+//---------------------------------------
+
+function Item( {name,children} )                 // here "name" that we have sended and "children" is bydefault to access children
+{
+
+
+  return(
+         <div>                                    
+
+             <p> {pname} </p>                          
+             { children }                   // here we can acces " i am children..."
 
           </div>
   );
