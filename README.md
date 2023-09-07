@@ -846,7 +846,7 @@ const store = configureStore({
 
   reducer : {
         counter : CounterSlice ,                         // idhar "reducer" obj k andar sabhi slides ayegi ==> name : sliceName
-    },
+    },                                                   // agar ERRORS aarhe hai like( Store does not have a valid reducer) toh `CartSlice.reducer` try kro
 
 })
 
@@ -908,4 +908,20 @@ function CounterComponent()
 
 }
 
+```
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖ <br/>
+✔️ Access Input parameters using "action.payload"
+
+```
+.
+.
+.
+reducers : { 
+   add : (state,action) => { ( state + action.payload ) }        //state means present value -- and -- action.payload means passed argument
+}
+
+//-------------------------------
+//passed arguments from anywhere
+
+dispatch(add(5)) ;
 ```
