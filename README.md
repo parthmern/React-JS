@@ -925,3 +925,17 @@ reducers : {
 
 dispatch(add(5)) ;
 ```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+# 🧩 CHEAT-SHEET 🎼 🎇
+
+ 🎯 [by LoveBabbar](https://drive.google.com/file/d/1gvCogzZeqEcY8UwCypfR7LOFx2soaXCx/view?usp=sharing) <br/>
+ 🎯 [random](https://drive.google.com/file/d/16Z7qBikLr_GTjI-xzmHyRIVtiZmZnN28/view?usp=sharing) <br/>
+ 🎯 [by tutorialsPoint](https://drive.google.com/file/d/1DGP7WYTMjEnxdfmpz3PSLKYMUAw4H1lT/view?usp=sharing) <br/>
+ 🎯 [imp topics to learn](https://drive.google.com/file/d/1EtA2awgTCVZckTAO__zHfrNL88yNlaei/view?usp=sharing) <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+♻️ @ Created by Parth with 💚
