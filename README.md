@@ -928,6 +928,14 @@ dispatch(add(5)) ;
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## ❤️ useReducer hook
+➔ if you want to use multiple useState() then to avoid this you can use this <br/>
+➔ [technical-thapa](https://youtu.be/VdXGIEYZuCw?si=Bg6O_vSW8OYLdUmd) <br/>
+➔ [gpt](https://chat.openai.com/share/aa3c0607-c76e-42be-bd88-4602a08b785d) <br/>
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
