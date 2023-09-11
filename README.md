@@ -934,6 +934,74 @@ dispatch(add(5)) ;
 ➔ [technical-thapa](https://youtu.be/VdXGIEYZuCw?si=Bg6O_vSW8OYLdUmd) <br/>
 ➔ [gpt](https://chat.openai.com/share/aa3c0607-c76e-42be-bd88-4602a08b785d) <br/>
 
+🚨 Explained in amazon clone by [cleaver programmer](https://youtu.be/RDV3Z1KCBvo?si=F_9n5O1xr0th0CwG)
+
+```
+//📂 src > context > StateProvider.js
+
+import React, { createContext, useContext, useReducer } from "react";
+
+export const StateContext = createContext();
+
+export const StateProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider value={useReducer(reducer, initialState)}>
+    {children}
+  </StateContext.Provider>
+);
+
+//anywhere we can use useStateValue() instead of using useContextHOOK which is useContext(StateContext)
+export const useStateValue = () => useContext(StateContext);
+```
+
+```
+//📂 src > context > reducer.js
+
+export const initialState = {
+  user: null,
+  playlists: [],
+}
+
+const reducer = (state, action) =>
+{
+  console.log(action);
+
+  switch (action.type)
+  {
+    case "SET_USER" :
+      return {
+        ...state,
+        user: action.user,
+      };
+
+   case "SET_PLAYLISTS" :
+      return {
+        ...state,
+        playlists: action.playlists,
+      };
+
+   default :
+      return state;
+
+    }
+}
+
+export default reducer;
+```
+
+```
+// 📂 index.js
+
+ReactDOM.render(
+  <React.StrictMode>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </StateProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+
+```
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
