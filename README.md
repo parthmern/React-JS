@@ -1021,7 +1021,7 @@ const [state,dispatch] = useContext(stateContext);
 //or
 const [{user,playlists} ,dispatch] = useDataLayerValue();   //console.log(user); -- everytime updated like useState
 
-//console.log("state ==",state); // initialValues or latestValuesOfInitialState
+//console.log("state ==",state); // initialValues {user: null,playlists: []} OTHERWISE latestValuesOfInitialState {user: "updatedValue",playlists: []}
 //console.log("dispatch ==",dispatch); // function to set initialValues
 
 dispatch({
