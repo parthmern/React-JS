@@ -934,8 +934,15 @@ dispatch(add(5)) ;
 ➔ [technical-thapa](https://youtu.be/VdXGIEYZuCw?si=Bg6O_vSW8OYLdUmd) <br/>
 ➔ [gpt](https://chat.openai.com/share/aa3c0607-c76e-42be-bd88-4602a08b785d) <br/>
 
-🚨 Explained in amazon clone by [cleaver programmer](https://youtu.be/RDV3Z1KCBvo?si=F_9n5O1xr0th0CwG)
+🚨 Explained in amazon clone by [cleaver programmer](https://youtu.be/RDV3Z1KCBvo?si=F_9n5O1xr0th0CwG) <br/>
 
+<br/>
+
+<br/>
+
+
+
+➔ with context-api
 ```
 //📂 src > context > StateProvider.js
 
@@ -953,6 +960,7 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 export const useStateValue = () => useContext(StateContext);
 ```
 
+➔ reducer file which have reducer initialState and reducer
 ```
 //📂 src > context > reducer.js
 
@@ -965,7 +973,7 @@ const reducer = (state, action) =>
 {
   console.log(action);
 
-  switch (action.type)
+  switch (action.type)                  // we can also use IF-ELSEIF-ELSE here insted of switch
   {
     case "SET_USER" :
       return {
@@ -988,8 +996,11 @@ const reducer = (state, action) =>
 export default reducer;
 ```
 
+➔ how to joint context-api
 ```
 // 📂 index.js
+
+import reducer, { initialState } from "./reducer";  //📂 src > context > reducer.js
 
 ReactDOM.render(
   <React.StrictMode>
@@ -1000,6 +1011,23 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
+```
+
+➔ use useReducer() hoook
+```
+const [state,dispatch] = useDataLayerValue();
+//or
+const [state,dispatch] = useContext(stateContext);
+//or
+const [{user,playlists} ,dispatch] = useDataLayerValue();   //console.log(user); -- everytime updated like useState
+
+//console.log("state ==",state); // initialValues or latestValuesOfInitialState
+//console.log("dispatch ==",dispatch); // function to set initialValues
+
+dispatch({
+  type : "SET_USER",
+  user : "updatedValue",
+});
 ```
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
