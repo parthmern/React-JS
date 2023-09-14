@@ -926,6 +926,8 @@ reducers : {
 dispatch(add(5)) ;
 ```
 
+🎼[redux devTool extension for checking all presentState](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
