@@ -1034,6 +1034,14 @@ dispatch({
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+## 💛 useRef()
+➔ [use reference have 2 uses examples](https://youtu.be/qv2YPOnDwvA?si=yHA8SPK7DVdxZUY0) <br/>
+➔ example 2 is like .getElementbyId and .getElementbyClassname after doing `ref.current` <br/>
+➔ [example 2 of getting DOM element](https://chat.openai.com/share/e92dffe3-cbe6-4755-ba1e-a48868fea00d) <br/>
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
