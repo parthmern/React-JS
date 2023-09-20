@@ -644,6 +644,14 @@ const Labs =()=>{
 ```
  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
+
+➔✔️ useParams() hook - [chatGpt](https://chat.openai.com/share/4191cbed-841f-4fa0-9585-f59923153aef) <br/>
+
+<br/>
+
+➔✔️EXTRA imp = [add infinite scrolling reactJs library](https://youtu.be/F51xUcV3uH0?si=-plkQV9vbqd__VEz) <br/>
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
  <br/>
  
