@@ -1053,6 +1053,25 @@ dispatch({
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
+# 📛 Imp errors 
+➔ maintaining clickHandler or any function inside mapped component that render many times
+```
+// ye component map function k andar hoga so many timne run hoga ye same component
+
+function clickHandler(item){
+    //
+}
+
+return(
+   <div
+   onClick={()=>{clickHandler(item)}}                  // avoid to do like this "onClick={clickHandler(item)}"
+   >
+   </div>
+)
+
+```
+
+
 # 🧩 CHEAT-SHEET 🎼 🎇
 
  🎯 [by LoveBabbar](https://drive.google.com/file/d/1gvCogzZeqEcY8UwCypfR7LOFx2soaXCx/view?usp=sharing) <br/>
