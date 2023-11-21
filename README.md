@@ -1070,6 +1070,7 @@ return(
 )
 
 ```
+➔ react toaster means notification popup - [link](https://react-hot-toast.com/)
 
 
 # 🧩 CHEAT-SHEET 🎼 🎇
