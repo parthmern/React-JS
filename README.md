@@ -936,6 +936,9 @@ dispatch(add(5)) ;
 
 🎼[redux devTool extension for checking all presentState](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 
+
+## ❤️❤️💚❤️❤️ IMP READABLE [ chatgpt - with combinereducer ](https://chat.openai.com/share/2a2d5196-7a48-40ab-b89d-6da615cf68ed)
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
 
