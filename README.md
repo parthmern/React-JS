@@ -412,6 +412,25 @@ function App()
     return ()=>{ console.log("listener removed"); }
   })                                                                            //IMP= first run "listener removed" then run "listener added"
 
+ // OR-----------
+
+  useEffect(() => {
+    const handleClick = () => {
+      console.log('Button clicked!');
+    };
+
+    // Add event listener when component mounts
+    // generally with hight and width types of or mouse move x,y poisition types of events
+    console.log('Listener added');
+    document.addEventListener('click', handleClick);
+
+    // Remove event listener when component unmounts
+    return () => {
+      console.log('Listener removed');
+      document.removeEventListener('click', handleClick);
+    };
+  }, []);
+
 
 //---------------------------------------------------------------------------------
 
