@@ -225,6 +225,14 @@ function clickHandlerFunction()
 
 // Event Handling
 <button onClick={clickHandlerFunction} > xxxx </button>
+
+// another way
+<button onClick={() => {
+    clickHandlerFunction();
+}}>
+  xxxx
+</button>
+
 ```
 
 ⚠️ *always remeber that while using `callbackFuntion` avoid to write this `callbackFuntion()` beacuse `()` means that automatically calls the function without any Event done*
