@@ -605,6 +605,10 @@ return (
  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖<br/>
  <br/>
+
+![img_630e4bb35c8bb](https://github.com/parthmern/React-JS/assets/125397720/d2a11609-6cce-46bb-b731-008cbd6020a7)
+
+ 
 ➔ `<Outlet>` parent route element ke andar child route elemnt ko render karne ki permission deta hai <br/>
 
 ```
